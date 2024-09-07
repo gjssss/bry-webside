@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'SmileySans';
+  src: url("/SmileySans-Oblique.ttf") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-smiley-sans {
+    font-family: 'SmileySans';
+}
