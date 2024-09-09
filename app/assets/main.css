@@ -1,11 +1,23 @@
 @font-face {
   font-family: 'SmileySans';
-  src: url("/SmileySans-Oblique.ttf.woff2") format('woff');
+  src: url('/SmileySans-Oblique.ttf.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .font-smiley-sans {
-    font-family: 'SmileySans';
+  font-family: 'SmileySans';
+}
+
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-svg path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-path 0.5s ease-in-out forwards;
 }
