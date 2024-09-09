@@ -16,7 +16,7 @@ if (document) {
 </script>
 
 <template>
-  <div class="fixed top-0 w-full flex items-center justify-between px-12 py-3" :class="isNext ? 'backdrop-blur-sm bg-#fff7' : ''">
+  <div class="fixed top-0 z-100 w-full flex items-center justify-between px-12 py-3" :class="isNext ? 'backdrop-blur-sm bg-#fff7' : ''">
     <Logo :width="149" :height="40" :color="isNext ? 'black' : 'white'" class="transition-all" />
     <div class="flex gap-16 transition-all" :class="isNext ? 'c-black' : 'c-white'">
       <a href="https://bbs.byr.cn/">北邮人BT</a>
