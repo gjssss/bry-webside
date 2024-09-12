@@ -1,20 +1,29 @@
 <script setup lang="ts">
+import DesignShow from './designShow.vue'
+import MediaShow from './mediaShow.vue'
+import ProductShow from './productShow.vue'
+import TechShow from './techShow.vue'
+
 const navList = ref([
   {
-    title: '产品运营组',
-    img: '/images/departments/icon-product.svg',
+    title: '新媒体组',
+    img: '/images/departments/icon-media.svg',
+    component: MediaShow,
   },
   {
     title: '设计组',
     img: '/images/departments/icon-design.svg',
+    component: DesignShow,
   },
   {
     title: '技术组',
     img: '/images/departments/icon-tech.svg',
+    component: TechShow,
   },
   {
-    title: '新媒体组',
-    img: '/images/departments/icon-media.svg',
+    title: '产品运营组',
+    img: '/images/departments/icon-product.svg',
+    component: ProductShow,
   },
 ])
 const current = ref(0)
@@ -39,8 +48,10 @@ const activateText = refDebounced(current, 150)
         </div>
       </div>
     </div>
-    <div class="min-h-548px">
-      ourDepartment
+    <div class="min-h-548px flex-1">
+      <Transition name="fade">
+        <component :is="navList[current]?.component" />
+      </Transition>
     </div>
   </div>
 </template>
@@ -78,5 +89,19 @@ const activateText = refDebounced(current, 150)
   background: var(--bg);
   background-position: center;
   background-repeat: no-repeat;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+  position: absolute;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
 }
 </style>
