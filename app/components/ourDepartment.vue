@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import DesignShow from './designShow.vue'
-import MediaShow from './mediaShow.vue'
+import MediaShow from './media/mediaShow.vue'
 import ProductShow from './productShow.vue'
 import TechShow from './techShow.vue'
 
-const navList = ref([
+const navList = [
   {
     title: '新媒体组',
     img: '/images/departments/icon-media.svg',
@@ -25,7 +25,7 @@ const navList = ref([
     img: '/images/departments/icon-product.svg',
     component: ProductShow,
   },
-])
+]
 const current = ref(0)
 const activateText = refDebounced(current, 150)
 </script>
@@ -48,8 +48,8 @@ const activateText = refDebounced(current, 150)
         </div>
       </div>
     </div>
-    <div class="min-h-548px flex-1">
-      <Transition name="fade">
+    <div class="min-h-568px flex-1">
+      <Transition name="fade" mode="out-in">
         <component :is="navList[current]?.component" />
       </Transition>
     </div>
@@ -93,7 +93,6 @@ const activateText = refDebounced(current, 150)
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s ease;
-  position: absolute;
 }
 
 .fade-enter-from {

@@ -9,3 +9,7 @@
 .font-smiley-sans {
   font-family: 'SmileySans';
 }
+
+.hide-scroll{
+  scrollbar-width:none;
+}
