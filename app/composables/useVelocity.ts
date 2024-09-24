@@ -23,26 +23,33 @@ export function useVelocity(num: Ref<number>, option?: UseVelocityOption) {
       startTime = endTime
       const deltaNumber = num.value - lastNumber!
       lastNumber = num.value
-      return deltaNumber / (deltaTime / 1000)
+      const v = deltaNumber / (deltaTime / 1000)
+      if (_onChange) {
+        _onChange(velocity.value)
+      }
+      return v
     }
     else {
       startTime = new Date()
       lastNumber = num.value
-      timer = setTimeout(() => {
-        clearTimeout(timer!)
-      }, _gap)
       return 0
     }
   }
 
-  watch(num, () => {
+  const watcher = watch(num, () => {
     velocity.value = getVelocity()
-    if (_onChange) {
-      _onChange(velocity.value)
+    if (timer) {
+      clearTimeout(timer)
     }
+    timer = setTimeout(() => {
+      timer = null
+      velocity.value = 0
+    }, _gap)
   }, {
     immediate: true,
   })
+
+  onUnmounted(watcher)
 
   return {
     getVelocity,

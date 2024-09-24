@@ -6,7 +6,7 @@ defineProps<{
     time: string
     messages: {
       render: VNode
-      props: object
+      props?: object
     }[]
   }
   direction: 'left' | 'right'

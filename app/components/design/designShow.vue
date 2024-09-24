@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div>
-    designShow
+  <div class="relative h-full w-full of-hidden">
+    <designBackground />
   </div>
 </template>
 

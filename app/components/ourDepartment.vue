@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DesignShow from './designShow.vue'
+import DesignShow from './design/designShow.vue'
 import MediaShow from './media/mediaShow.vue'
 import ProductShow from './productShow.vue'
 import TechShow from './techShow.vue'

@@ -1,5 +1,5 @@
 // sum.test.js
-import { assert, expect, it } from 'vitest'
+import { assert, it } from 'vitest'
 import { nextTick, ref } from 'vue'
 import { useVelocity } from './useVelocity.js'
 
