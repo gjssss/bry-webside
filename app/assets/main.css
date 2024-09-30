@@ -6,8 +6,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'DFPHeiW12';
+  src: url('/DFPHeiW12-GB5.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/poppins-800.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-smiley-sans {
   font-family: 'SmileySans';
+}
+.font-poppins {
+  font-family: 'poppins';
+}
+.font-DFPHeiW12 {
+  font-family: 'DFPHeiW12';
 }
 
 .hide-scroll {
