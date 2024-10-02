@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-screen of-hidden bg-#f5f5f5">
+  <div class="w-full of-hidden bg-#f5f5f5">
     <NavComp />
     <div class="absolute left-0 top-0 h-screen w-full">
       <div class="bg-image h-full w-full" />
