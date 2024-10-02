@@ -153,18 +153,4 @@ function sendMsg() {
 .media-bg {
   background-image: url('/images/departments/media/star-bg.svg');
 }
-.msg-title-bg {
-  position: relative;
-  z-index: 1;
-}
-.msg-title-bg::before {
-  content: '';
-  position: absolute;
-  width: 130%;
-  height: 60%;
-  left: 0;
-  bottom: 0;
-  z-index: 0;
-  background-image: linear-gradient(to right, #daff47, #d9d9d900);
-}
 </style>
