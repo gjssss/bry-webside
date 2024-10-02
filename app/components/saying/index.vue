@@ -24,7 +24,8 @@ const dataList = ref([
     name: 'zekin',
     department: '技术组',
     info: '22级-计算机学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div class="msg-title-bg ml-2">
           <div class="relative z-1">
@@ -49,7 +50,8 @@ const dataList = ref([
     name: 'momo',
     department: '新媒体组',
     info: '21级-网络空间安全学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div class="msg-title-bg ml-2">
           <div class="relative z-1">
@@ -67,20 +69,22 @@ const dataList = ref([
         </div>
       </div>
     </>,
-    saying: <>
+    saying:
+    <>
       年级（纪）越大，BYR Team越成为我的快乐老家，可可爱爱的学妹，温温柔柔的学弟，酷酷飒飒的老板老板娘以及一些可爱的小碎嘴子。
       <b>成年人的生活太需要这样的轻松和志趣</b>
       ，我们是线上的好友和伙伴，也是线下的小姐妹、好朋友。如果一定要用一个词来形容我们，那便是
       <b>松弛与理想并存</b>
       吧。
-            </>,
+    </>,
   },
   {
     img: '/images/senpai-saying/senpai-female-2.svg',
     name: 'Sprr',
     department: '设计组',
     info: '20级-数字媒体设计学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div>三好学生</div>
         <div class="msg-title-bg ml-2">
@@ -104,7 +108,8 @@ const dataList = ref([
     name: '好圆圆圆',
     department: '产品组',
     info: '20级-数字媒体设计学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div class="msg-title-bg ml-2">
           <div class="relative z-1">
@@ -112,6 +117,9 @@ const dataList = ref([
           </div>
         </div>
         <div>支教团美术老师一枚</div>
+        {' '}
+        <div>救火队长</div>
+
       </div>
       <div class="flex gap-2">
         <div>德艺双馨</div>
@@ -129,7 +137,8 @@ const dataList = ref([
     name: 'zekin',
     department: '技术组',
     info: '22级-计算机学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div class="msg-title-bg ml-2">
           <div class="relative z-1">
@@ -154,7 +163,8 @@ const dataList = ref([
     name: '+1',
     department: '新媒体组',
     info: '17级-数字媒体设计学院',
-    desc: <>
+    desc:
+    <>
       <div class="flex gap-2">
         <div class="msg-title-bg ml-2">
           <div class="relative z-1">
@@ -171,7 +181,8 @@ const dataList = ref([
         </div>
       </div>
     </>,
-    saying: <>
+    saying:
+    <>
       BYR Team在北邮是一个响当当的名号，在这里确实认识了很多
       <b>技术巨巨、设计大佬、运营鬼才</b>
       。重要的是大家都有
