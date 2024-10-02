@@ -36,7 +36,7 @@ const activateText = refDebounced(current, 150)
       <div
         v-for="item, index in navList"
         :key="index"
-        class="department-slider relative flex flex-1 cursor-pointer items-center justify-center px-3"
+        class="department-slider relative min-w-160px flex flex-1 cursor-pointer items-center justify-center px-3"
         :style="{ '--index': current, '--bg': `url(${navList[activateText]?.img})`, '--op': current === activateText ? 1 : 0 }"
         @click="current = index"
       >
