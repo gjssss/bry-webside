@@ -59,8 +59,21 @@ onMounted(() => {
         <ByrTitle>部门介绍</ByrTitle>
         <OurDepartment class="mt-40px" />
       </div>
+      <div class="mt-40px">
+        <ByrTitle>加入byrTeam的N个理由</ByrTitle>
+        <ByrReason />
+      </div>
+      <div class="mt-40px">
+        <ByrTitle>学长学姐说</ByrTitle>
+        <Saying class="mt-6" />
+      </div>
+      <div class="mt-40px">
+        <ByrTitle>招新公告与招新流程</ByrTitle>
+        <img src="/images/process/process-desktop-2024.svg" alt="" class=">md:hidden mt-4 w-full">
+        <img src="/images/process/process-mobile-2024.svg" alt="" class="mt-4 w-full md:hidden">
+      </div>
     </div>
-    <div class="h-3000px w-full" />
+    <WebFooter />
   </div>
 </template>
 
