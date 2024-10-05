@@ -118,7 +118,7 @@ function sendMsg() {
         🎉招新啦🎉
       </div>
     </div>
-    <div ref="scrollElem" class="hide-scroll h-400px of-auto p-4">
+    <div ref="scrollElem" class="hide-scroll h-400px of-auto p-4 pb-0">
       <div class="media-bg flex flex-col gap-20px">
         <MediaMsgGroup :group="group1" direction="right" />
         <div class="w-full text-center c-gray-5">
@@ -132,7 +132,7 @@ function sendMsg() {
     </div>
     <div class="flex-1 b-t b-#E5E7EB b-solid p-4">
       <div class="h-full w-full flex items-center gap-20px rounded-full bg-#f6f8fc px-11 py-3">
-        <img class="cursor-pointer" src="/images/departments/media/icon-pin.svg">
+        <img class="cursor-pointer <md:w-20px" src="/images/departments/media/icon-pin.svg">
         <div class="h-full w-2px bg-gray-2" />
         <input
           v-model="text"
@@ -141,9 +141,9 @@ function sendMsg() {
           placeholder="请输入..."
           @keypress.enter="sendMsg"
         >
-        <img class="cursor-pointer" src="/images/departments/media/icon-smile.svg">
-        <img class="cursor-pointer" src="/images/departments/media/icon-photo.svg">
-        <img class="cursor-pointer" src="/images/departments/media/icon-location.svg">
+        <img class="cursor-pointer <md:w-20px" src="/images/departments/media/icon-smile.svg">
+        <img class="cursor-pointer <md:w-20px" src="/images/departments/media/icon-photo.svg">
+        <img class="cursor-pointer <md:w-20px" src="/images/departments/media/icon-location.svg">
       </div>
     </div>
   </div>

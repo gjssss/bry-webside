@@ -5,7 +5,7 @@ const cardWidth = ref(720)
 const computedStyle = computed(() => {
   return {
     'transform': `translateX(${(-current.value) * (cardWidth.value + 30)}px)`,
-    'padding-left': `${width.value / 3}px`,
+    'padding-left': `${width.value < 640 ? 0 : width.value / 5}px`,
     '--w': '100%',
     '--h': '80%',
   }
@@ -15,6 +15,12 @@ onMounted(() => {
     width.value = window.document.documentElement.clientWidth
     addEventListener('resize', () => {
       width.value = window.document.documentElement.clientWidth
+      if (width.value < 640) {
+        cardWidth.value = width.value
+      }
+      else {
+        cardWidth.value = 720
+      }
     })
   }
 })
@@ -79,7 +85,7 @@ const dataList = ref([
     </>,
   },
   {
-    img: '/images/senpai-saying/senpai-female-2.svg',
+    img: '/images/senpai-saying/senpai-female.svg',
     name: 'Sprr',
     department: '设计组',
     info: '20级-数字媒体设计学院',
@@ -159,7 +165,7 @@ const dataList = ref([
     saying: <>在这里可以接触各路神仙，挑战各种问题，发展各式能力，探索各类可能。一个自驱的团队可以帮你能力与乐趣两开花，解决现实问题的同时丰富你的履历。如果你觉得 [这里忘了] 就去建设它，那这里就是最适合的地方，改变北邮的机会正触手可及！It’s now or never !</>,
   },
   {
-    img: '/images/senpai-saying/senpai-female-3.svg',
+    img: '/images/senpai-saying/senpai-female.svg',
     name: '+1',
     department: '新媒体组',
     info: '17级-数字媒体设计学院',
@@ -207,7 +213,7 @@ const dataList = ref([
         </template>
       </SayingItem>
     </div>
-    <div class="absolute bottom-0 right-80px z-11 flex gap-8">
+    <div class="absolute bottom-0 right-80px z-11 flex gap-8 <md:hidden">
       <div
         class="rounded-full p-3 shadow transition-all"
         :class="current > 0 ? 'cursor-pointer hover:bg-#175ddc hover:c-white bg-white c-black' : 'bg-#d4d4d4 c-#a1a1a1'"
@@ -223,5 +229,15 @@ const dataList = ref([
         <div class="i-carbon-arrow-right text-32px" />
       </div>
     </div>
+    <div
+      class="i-carbon-arrow-left absolute left-0 top-50% text-32px md:hidden"
+      :class="current > 0 ? 'cursor-pointer c-black' : ' c-#a1a1a1'"
+      @click="current > 0 ? current -= 1 : 1"
+    />
+    <div
+      class="i-carbon-arrow-right absolute right-0 top-50% cursor-pointer text-32px md:hidden"
+      :class="current < dataList.length - 1 ? 'cursor-pointer c-black' : ' c-#a1a1a1'"
+      @click="current < dataList.length - 1 ? current += 1 : 1"
+    />
   </div>
 </template>
