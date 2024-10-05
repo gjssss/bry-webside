@@ -26,7 +26,7 @@ const data = ref([
   {
     title: '校园网指南',
     image: '/images/service/service-neticu-wiki.png',
-    content: (
+    content:
       <>
         <p>
           “校园网该怎么连？” “
@@ -49,20 +49,18 @@ const data = ref([
             link
           </a>
         </p>
-      </>
-    ),
+      </>,
     brief: '网又炸了？校园网使用指南和诊断平台重磅上线！',
     url: 'https://wiki.buptnet.icu',
   },
   {
     title: 'Byrio社区',
     image: '/images/service/service-byrio.png',
-    content:
-      <>
-        <p>
-          BYRIOSC是一个围绕互联网技术与开源文化，主题涵盖科技、开发、设计、媒体，由开发者和创意工作者组成的线上交流、线下活动的学生社区。我们力求吸引富有热情和兴趣的开发者、创造者们加入，凝聚北邮各大学生技术组织的力量，建设成为最富有活力和创造力的学生技术社区。
-        </p>
-      </>,
+    content: (
+      <p>
+        BYRIOSC是一个围绕互联网技术与开源文化，主题涵盖科技、开发、设计、媒体，由开发者和创意工作者组成的线上交流、线下活动的学生社区。我们力求吸引富有热情和兴趣的开发者、创造者们加入，凝聚北邮各大学生技术组织的力量，建设成为最富有活力和创造力的学生技术社区。
+      </p>
+    ),
     brief: '“FOR HACKER, GEEK & CREATOR LIKE YOU”',
     url: 'https://byrio.org',
   },
@@ -70,11 +68,9 @@ const data = ref([
     title: 'Gitlab',
     image: '/images/service/service-gitlab.png',
     content: (
-      <>
-        <p>
-          GitLab是由GitLab公司开发的、基于Git的集成软件开发平台。另外，GitLab且具有wiki以及在线编辑、issue跟踪功能、CI/CD等功能。
-        </p>
-      </>
+      <p>
+        GitLab是由GitLab公司开发的、基于Git的集成软件开发平台。另外，GitLab且具有wiki以及在线编辑、issue跟踪功能、CI/CD等功能。
+      </p>
     ),
     brief: '“CI/CD真是太好用了.jpg”',
     url: 'https://git.byr.moe',
@@ -129,7 +125,7 @@ const current = ref(0)
         >
         <CircleSvg
           :actived="current === index"
-          class="absolute left-50% top-50% translate--50%"
+          class="absolute left-50% top-50% translate--50% scale-50 lg:scale-75 md:scale-100"
           @click="current = index"
         />
       </div>

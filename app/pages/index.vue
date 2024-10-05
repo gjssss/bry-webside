@@ -24,26 +24,26 @@ onMounted(() => {
     <div class="absolute left-0 top-0 h-screen w-full">
       <div class="bg-image h-full w-full" />
     </div>
-    <div class="relative z-1 h-screen w-full from-black/40 bg-gradient-to-r pl-80px pt-80px">
-      <div class="h-full max-w-564px flex flex-col justify-center c-white">
-        <div class="font-smiley-sans text-64px">
+    <div class="relative z-1 h-screen w-full from-black/40 bg-gradient-to-r px-8 pt-8 md:pl-80px md:pt-80px">
+      <div class="h-full max-w-564px flex flex-col justify-center gap-4 c-white">
+        <div class="font-smiley-sans text-48px md:text-64px">
           We want you:
         </div>
-        <div class="font-smiley-sans text-64px">
+        <div class="font-smiley-sans text-48px md:text-64px">
           我们在这里
         </div>
-        <div class="font-smiley-sans text-64px">
+        <div class="font-smiley-sans text-48px md:text-64px">
           等风也等你
         </div>
         <div>
           成立于2000年初，北邮人团队已经陪伴了北邮师生20年有余。我们一直致力于服务北邮人，为北邮师生提供更加便利的服务，一代代北邮人薪火传承北邮人的服务实干精神，用青春书写北邮人的辉煌历程。而现在，无论你是新生还是老司机，只要你怀揣梦想，热爱探索，我们都欢迎你的加入！北邮人总有适合你的地方，让我们一起书写精彩的青春篇章！We Want You！
         </div>
-        <div>
+        <div class="flex justify-center md:block">
           <a class="mt-4 inline-block cursor-pointer rounded-full bg-#fff8 px-8 py-4 backdrop-blur-sm">加入我们</a>
         </div>
       </div>
     </div>
-    <div ref="contentContainer" class="relative z-1 pt-12">
+    <div ref="contentContainer" class="relative z-1 px-4 pt-12 md:px-0">
       <div class="mx-a max-w-1280px">
         <ByrTitle>关于BYR-Team</ByrTitle>
         <div class="mt-3 px-6 py-3 text-sm leading-loose space-y-4 sm:py-9 lg:text-base sm:space-y-2">
