@@ -43,7 +43,16 @@ export default defineNuxtConfig({
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        { name: 'description', content: '北邮人团队2024首页gjs复刻' },
       ],
+      link: [
+        {
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+          sizes: '48x48',
+        },
+      ],
+      title: '北邮人团队-复刻',
     },
   },
 
