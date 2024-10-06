@@ -125,7 +125,7 @@ const current = ref(0)
         >
         <CircleSvg
           :actived="current === index"
-          class="absolute left-50% top-50% translate--50% scale-50 lg:scale-75 md:scale-100"
+          class="absolute left-50% top-50% translate--50% scale-50 md:scale-100 sm:scale-75"
           @click="current = index"
         />
       </div>
