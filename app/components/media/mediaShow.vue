@@ -131,7 +131,7 @@ function sendMsg() {
       </div>
     </div>
     <div class="flex-1 b-t b-#E5E7EB b-solid p-4">
-      <div class="h-full w-full flex items-center gap-20px rounded-full bg-#f6f8fc px-11 py-3">
+      <div class="h-full w-full flex items-center gap-4 rounded-full bg-#f6f8fc px-11 py-3 <md:gap-1 <md:px-4">
         <img class="cursor-pointer <md:w-20px" src="/images/departments/media/icon-pin.svg">
         <div class="h-full w-2px bg-gray-2" />
         <input

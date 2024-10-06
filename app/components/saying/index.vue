@@ -12,18 +12,20 @@ const computedStyle = computed(() => {
 })
 onMounted(() => {
   if (document) {
-    width.value = window.document.documentElement.clientWidth
-    addEventListener('resize', () => {
-      width.value = window.document.documentElement.clientWidth
-      if (width.value < 640) {
-        cardWidth.value = width.value
-      }
-      else {
-        cardWidth.value = 720
-      }
-    })
+    updateWidth()
+    addEventListener('resize', updateWidth)
   }
 })
+function updateWidth() {
+  width.value = window.document.documentElement.clientWidth
+  if (width.value < 640) {
+    cardWidth.value = width.value
+  }
+  else {
+    cardWidth.value = 720
+  }
+}
+
 const dataList = ref([
   {
     img: '/images/senpai-saying/senpai-male.svg',
